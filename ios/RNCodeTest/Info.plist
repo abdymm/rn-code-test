@@ -57,5 +57,7 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>ServiceKey</key>
+	<string>$(SERVICE_KEY)</string>
 </dict>
 </plist>
