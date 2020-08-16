@@ -1,11 +1,22 @@
 import React from 'react';
+import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Info from './Info';
 import Market from './Market';
+import MarketDetail from './MarketDetail';
 
 const HomeTabs = createBottomTabNavigator();
+const Stack = createStackNavigator();
 
+function StackNavigator() {
+  return (
+    <Stack.Navigator headerMode={'none'}>
+      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="MarketDetail" component={MarketDetail} />
+    </Stack.Navigator>
+  );
+}
 const Home = () => {
   return (
     <HomeTabs.Navigator
@@ -33,4 +44,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default StackNavigator;
